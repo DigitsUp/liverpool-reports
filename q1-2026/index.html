@@ -1288,71 +1288,6 @@ document.addEventListener('keydown',function(e){
         </div>
       </div>
 
-      <!-- UNSUB DRIVERS SUBSECTION -->
-      <div class="chart-frame" style="margin-top:0;border-top:3px solid var(--denim)">
-        <div class="chart-eyebrow">
-          <h3>Unsub Drivers: <em>What the Data Shows</em></h3>
-          <div class="note">Qualitative sample · Q1 2026 · 10 profiles</div>
-        </div>
-
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:28px">A sample of 10 customers who 1-click unsubscribed in Q1 revealed three consistent patterns:</p>
-
-        <!-- FINDINGS -->
-        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px">
-
-          <!-- Finding 1 -->
-          <div style="background:rgba(31,58,95,0.05);border:1px solid rgba(31,58,95,0.15);border-left:3px solid var(--denim);border-radius:2px;padding:18px 20px;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:flex-start">
-            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;color:var(--denim);line-height:1;letter-spacing:-0.02em">01</div>
-            <div>
-              <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--denim);font-weight:600;margin-bottom:6px">Finding — Resend stacking</div>
-              <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:6px">The same campaign was resent to non-openers 2–3 days apart, resulting in identical or near-identical emails hitting the inbox back-to-back.</p>
-              <p style="font-size:12px;color:var(--ink-mute);line-height:1.5;font-style:italic">Example: <em>New Arrivals: A Quick Spring Escape</em> received April 17 and again April 19 by the same profiles.</p>
-            </div>
-          </div>
-
-          <!-- Finding 2 -->
-          <div style="background:rgba(31,58,95,0.05);border:1px solid rgba(31,58,95,0.15);border-left:3px solid var(--denim);border-radius:2px;padding:18px 20px;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:flex-start">
-            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;color:var(--denim);line-height:1;letter-spacing:-0.02em">02</div>
-            <div>
-              <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--denim);font-weight:600;margin-bottom:6px">Finding — Sale urgency clustering</div>
-              <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:6px">Promotional urgency sequences (Don't Miss Out → Last Chance → Hurry, Ends Soon) sent 3 emails within a single day around the same offer.</p>
-              <p style="font-size:12px;color:var(--ink-mute);line-height:1.5;font-style:italic">Example: April 14 — 3 separate 25% off emails to Chris Rau within hours.</p>
-            </div>
-          </div>
-
-          <!-- Finding 3 -->
-          <div style="background:rgba(31,58,95,0.05);border:1px solid rgba(31,58,95,0.15);border-left:3px solid var(--denim);border-radius:2px;padding:18px 20px;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:flex-start">
-            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;color:var(--denim);line-height:1;letter-spacing:-0.02em">03</div>
-            <div>
-              <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--denim);font-weight:600;margin-bottom:6px">Finding — Flow + campaign collision</div>
-              <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:6px">New subscribers received welcome flow emails at the same time as broadcast campaigns, including one instance of an unfired Liquid tag (<code style="font-family:monospace;background:rgba(31,58,95,0.08);padding:1px 5px;border-radius:2px;font-size:12px">{{ first_name }}</code>) delivered live.</p>
-              <p style="font-size:12px;color:var(--ink-mute);line-height:1.5;font-style:italic">Combined with 2 campaigns on the same day, this created a poor first impression at a critical moment.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- RECOMMENDATIONS -->
-        <div style="background:linear-gradient(135deg,rgba(168,135,74,0.07),rgba(168,135,74,0.03));border:1px solid rgba(168,135,74,0.25);border-top:3px solid var(--gold);border-radius:2px;padding:24px 24px 20px">
-          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px">What We Recommend</div>
-          <ol style="list-style:none;display:flex;flex-direction:column;gap:12px;padding:0;margin:0">
-            <li style="display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:flex-start">
-              <span style="font-family:'Mulish',sans-serif;font-weight:600;font-size:13px;color:var(--gold);padding-top:1px">1</span>
-              <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0">Implement a <strong style="color:var(--ink)">1-email-per-day send cap</strong> per profile using Klaviyo's Smart Sending or flow filters</p>
-            </li>
-            <li style="display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:flex-start;padding-top:12px;border-top:1px solid rgba(168,135,74,0.15)">
-              <span style="font-family:'Mulish',sans-serif;font-weight:600;font-size:13px;color:var(--gold);padding-top:1px">2</span>
-              <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0">Add a <strong style="color:var(--ink)">suppression window for active welcome/onboarding flows</strong> — pause broadcast campaigns for new subscribers during first 7 days</p>
-            </li>
-            <li style="display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:flex-start;padding-top:12px;border-top:1px solid rgba(168,135,74,0.15)">
-              <span style="font-family:'Mulish',sans-serif;font-weight:600;font-size:13px;color:var(--gold);padding-top:1px">3</span>
-              <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0"><strong style="color:var(--ink)">Review resend logic</strong> — limit non-opener resends to 1 per campaign, with a minimum 5-day gap</p>
-            </li>
-          </ol>
-        </div>
-
-      </div>
-
       <!-- SMS CARD -->
       <div class="chart-frame">
         <div class="chart-eyebrow">
@@ -1425,6 +1360,66 @@ document.addEventListener('keydown',function(e){
       </div>
 
     </div>
+
+    <!-- UNSUB DRIVERS — FULL WIDTH -->
+    <div class="chart-frame reveal" style="margin-top:32px;border-top:3px solid var(--denim)">
+      <div class="chart-eyebrow">
+        <h3>Unsub Drivers: <em>What the Data Shows</em></h3>
+        <div class="note" style="display:inline-flex;align-items:center;gap:6px;background:rgba(31,58,95,0.07);border:1px solid rgba(31,58,95,0.15);border-radius:20px;padding:4px 12px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--denim)">Qualitative sample: Q1 2026 · 10 profiles</div>
+      </div>
+
+      <p style="font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:28px;margin-top:16px">A sample of 10 customers who 1-click unsubscribed in Q1 revealed three consistent patterns:</p>
+
+      <!-- FINDINGS -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px">
+
+        <!-- Finding 1 -->
+        <div style="background:rgba(31,58,95,0.05);border:1px solid rgba(31,58,95,0.15);border-top:3px solid var(--denim);border-radius:2px;padding:22px 20px">
+          <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:32px;color:var(--denim);line-height:1;letter-spacing:-0.02em;margin-bottom:12px">01</div>
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--denim);font-weight:600;margin-bottom:8px">Resend Stacking</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:8px">The same campaign was resent to non-openers 2–3 days apart, resulting in identical or near-identical emails hitting the inbox back-to-back.</p>
+          <p style="font-size:12px;color:var(--ink-mute);line-height:1.5;font-style:italic">Example: <em>New Arrivals: A Quick Spring Escape</em> received April 17 and again April 19 by the same profiles.</p>
+        </div>
+
+        <!-- Finding 2 -->
+        <div style="background:rgba(31,58,95,0.05);border:1px solid rgba(31,58,95,0.15);border-top:3px solid var(--denim);border-radius:2px;padding:22px 20px">
+          <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:32px;color:var(--denim);line-height:1;letter-spacing:-0.02em;margin-bottom:12px">02</div>
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--denim);font-weight:600;margin-bottom:8px">Sale Urgency Clustering</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:8px">Promotional urgency sequences (Don't Miss Out → Last Chance → Hurry, Ends Soon) sent 3 emails within a single day around the same offer.</p>
+          <p style="font-size:12px;color:var(--ink-mute);line-height:1.5;font-style:italic">Example: April 14 — 3 separate 25% off emails delivered within hours.</p>
+        </div>
+
+        <!-- Finding 3 -->
+        <div style="background:rgba(31,58,95,0.05);border:1px solid rgba(31,58,95,0.15);border-top:3px solid var(--denim);border-radius:2px;padding:22px 20px">
+          <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:32px;color:var(--denim);line-height:1;letter-spacing:-0.02em;margin-bottom:12px">03</div>
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--denim);font-weight:600;margin-bottom:8px">Flow + Campaign Collision</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:8px">New subscribers received welcome flow emails at the same time as broadcast campaigns, including one instance of an unfired Liquid tag (<code style="font-family:monospace;background:rgba(31,58,95,0.08);padding:1px 5px;border-radius:2px;font-size:12px">{{ first_name }}</code>) delivered live.</p>
+          <p style="font-size:12px;color:var(--ink-mute);line-height:1.5;font-style:italic">Combined with 2 campaigns on the same day, this created a poor first impression at a critical moment.</p>
+        </div>
+
+      </div>
+
+      <!-- RECOMMENDATIONS -->
+      <div style="background:linear-gradient(135deg,rgba(168,135,74,0.07),rgba(168,135,74,0.03));border:1px solid rgba(168,135,74,0.25);border-top:3px solid var(--gold);border-radius:2px;padding:24px 32px 22px">
+        <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px">What We Recommend</div>
+        <ol style="list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0;margin:0">
+          <li style="display:flex;gap:12px;align-items:flex-start">
+            <span style="font-family:'Mulish',sans-serif;font-weight:600;font-size:15px;color:var(--gold);padding-top:1px;flex-shrink:0">1</span>
+            <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0">Implement a <strong style="color:var(--ink)">1-email-per-day send cap</strong> per profile using Klaviyo's Smart Sending or flow filters</p>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;padding-left:20px;border-left:1px solid rgba(168,135,74,0.2)">
+            <span style="font-family:'Mulish',sans-serif;font-weight:600;font-size:15px;color:var(--gold);padding-top:1px;flex-shrink:0">2</span>
+            <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0">Add a <strong style="color:var(--ink)">suppression window for active welcome/onboarding flows</strong> — pause broadcast campaigns for new subscribers during first 7 days</p>
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;padding-left:20px;border-left:1px solid rgba(168,135,74,0.2)">
+            <span style="font-family:'Mulish',sans-serif;font-weight:600;font-size:15px;color:var(--gold);padding-top:1px;flex-shrink:0">3</span>
+            <p style="font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0"><strong style="color:var(--ink)">Review resend logic</strong> — limit non-opener resends to 1 per campaign, with a minimum 5-day gap</p>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
