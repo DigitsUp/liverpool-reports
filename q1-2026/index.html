@@ -966,6 +966,311 @@ document.addEventListener('keydown',function(e){
         </ul>
       </div>
     </div>
+
+    <!-- FLOW CARDS -->
+    <div class="container" style="margin-top:48px">
+<style>
+  :root{
+    --cream:#F3EEE5;
+    --cream-deep:#EAE2D3;
+    --paper:#FBF8F2;
+    --ink:#14120F;
+    --ink-soft:#2B2720;
+    --ink-mute:#6B6359;
+    --rule:#D8CFBE;
+    --denim:#1F3A5F;
+    --denim-light:#4A6B8F;
+    --gold:#A8874A;
+    --sage:#5F7A61;
+    --rust:#B85840;
+  }
+  .flow-card{background:var(--paper);border:1px solid var(--rule);padding:28px 28px 24px;position:relative;overflow:hidden}
+  .flow-card .fc-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;margin-bottom:10px}
+  .flow-card .fc-name{font-family:'Mulish',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.01em;color:var(--ink);line-height:1.2;padding-bottom:16px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+  .flow-card .fc-metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--rule);margin-bottom:14px}
+  .flow-card .fc-metric{padding:14px 14px 12px;border-right:1px solid var(--rule)}
+  .flow-card .fc-metric:last-child{border-right:none}
+  .flow-card .fc-metric .fc-m-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;margin-bottom:6px}
+  .flow-card .fc-metric .fc-m-val{font-family:'Mulish',sans-serif;font-weight:300;font-size:20px;letter-spacing:-0.01em;color:var(--ink);line-height:1}
+  .flow-card .fc-yoy{display:flex;gap:24px;font-size:12px;color:var(--ink-mute);flex-wrap:wrap;align-items:center;padding-top:12px;border-top:1px solid var(--rule)}
+  .flow-card .fc-yoy .fc-yoy-label{font-weight:600;color:var(--ink-soft);font-size:11px;letter-spacing:0.05em;text-transform:uppercase}
+  .flow-card .fc-note{font-size:11px;color:var(--ink-mute);font-style:italic;margin-top:8px;padding-left:2px;letter-spacing:0.01em}
+  .flow-card .fc-narrative{background:var(--cream-deep);border-left:2px solid var(--rule);padding:12px 14px;margin-top:14px;font-size:12px;color:var(--ink-soft);font-style:italic;line-height:1.55;border-radius:0 2px 2px 0}
+  .flow-card.fc-up{border-left:3px solid var(--sage)}
+  .flow-card.fc-down{border-left:3px solid var(--rust)}
+  .flow-card.fc-new{border-left:3px solid var(--gold)}
+  .delta.up{color:var(--sage);font-weight:600}
+  .delta.down{color:var(--rust);font-weight:600}
+  .flow-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:900px){.flow-cards-grid{grid-template-columns:1fr}.flow-card .fc-metrics{grid-template-columns:repeat(3,1fr)}.flow-card .fc-metric:nth-child(3){border-right:none}.flow-card .fc-metric:nth-child(4){border-top:1px solid var(--rule)}.flow-card .fc-metric:nth-child(5){border-top:1px solid var(--rule);border-right:none}}
+</style>
+
+<div class="flow-cards-grid">
+
+  <!-- 1. Welcome Series — Email (CORRECTED) -->
+  <div class="flow-card fc-down">
+    <div class="fc-label">Email Flow</div>
+    <div class="fc-name">Welcome Series — Email</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">49,302</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">2,250</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">676</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$153</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$103,618</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta down">↓14.2%</span>
+      <span>Q1 2025: $120,754 · Sends 53,275 · Clicks 2,217 · Orders 838 · AOV $144</span>
+    </div>
+    <div class="fc-note">Data methodology: 2026 = Email 2026 + New 2025 combined &nbsp;|&nbsp; 2025 = New 2024 + New 2025 combined</div>
+    <div class="fc-narrative">Sends dipped 7.5% and revenue followed, but the story here is list growth, not flow performance. AOV is up 6.4% — the subscribers who do convert are spending more. The gap closes when the top of funnel grows.</div>
+  </div>
+
+  <!-- 2. Welcome Series — SMS -->
+  <div class="flow-card fc-down">
+    <div class="fc-label">SMS Flow</div>
+    <div class="fc-name">Welcome Series — SMS</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">19,279</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">3,142</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">1,039</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$150</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$156,195</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta down">↓3.9%</span>
+      <span>Q1 2025: $162,590 · Sends 10,876 · Clicks 2,677 · Orders 1,075 · AOV $151</span>
+    </div>
+    <div class="fc-narrative">Roughly flat year-over-year despite 77% more sends — the 2025 flow was a high performer and the 2026 version is holding its own at scale. Revenue and AOV are nearly identical, which means the new flow is delivering consistent quality without regression.</div>
+  </div>
+
+  <!-- 3. Added to Cart -->
+  <div class="flow-card fc-down">
+    <div class="fc-label">Email Flow</div>
+    <div class="fc-name">Added to Cart</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">37,727</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">3,482</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">606</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$185</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$112,310</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta down">↓25.5%</span>
+      <span>Q1 2025: $150,726 · Sends 41,713 · Clicks 3,108 · Orders 914 · AOV $165</span>
+    </div>
+    <div class="fc-narrative">More clicks, fewer orders — conversion dropped sharply despite stronger engagement. The 2025 flow replacement drove better intent signals but didn't close as well. Worth investigating the offer or timing between trigger and send.</div>
+  </div>
+
+  <!-- 4. Abandoned Checkout -->
+  <div class="flow-card fc-up">
+    <div class="fc-label">Email Flow</div>
+    <div class="fc-name">Abandoned Checkout</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">15,404</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">1,795</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">590</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$168</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$98,945</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta up">↑14.8%</span>
+      <span>Q1 2025: $86,163 · Sends 13,969 · Clicks 1,220 · Orders 601 · AOV $143</span>
+    </div>
+    <div class="fc-narrative">Clicks up 47%, revenue up 14.8%, AOV up 17% — this is the quietly reliable one. Same order volume as last year but higher value per transaction. The flow is doing its job and then some.</div>
+  </div>
+
+  <!-- 5. Browse Abandonment -->
+  <div class="flow-card fc-up">
+    <div class="fc-label">Email Flow</div>
+    <div class="fc-name">Browse Abandonment</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">80,735</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">7,098</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">270</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$143</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$38,733</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta up">↑178%</span>
+      <span>Q1 2025: $13,940 · Sends 23,459 · Clicks 1,535 · Orders 113 · AOV $123</span>
+    </div>
+    <div class="fc-narrative">The full rebuild paid off. Sends up 244%, revenue up 178% — this went from an underperforming flow to one of the biggest winners in the program. Volume and quality both improved.</div>
+  </div>
+
+  <!-- 6. Post-Purchase Optimization (NEW) -->
+  <div class="flow-card fc-new">
+    <div class="fc-label">Email Flow</div>
+    <div class="fc-name">Post-Purchase Optimization</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">70,221</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">4,692</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">292</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$133</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$38,697</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">New in 2026</span>
+      <span>No prior year comparison available.</span>
+    </div>
+    <div class="fc-narrative">New in 2025, no prior comp — but $38.7K in Q1 from a flow that didn't exist last year is real incremental revenue. Early signs on AOV and click rate are solid. This one will have a YoY story to tell next quarter.</div>
+  </div>
+
+  <!-- 7. Win-back (NEW) -->
+  <div class="flow-card fc-new">
+    <div class="fc-label">Email Flow</div>
+    <div class="fc-name">Win-back</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">21,030</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">1,325</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">73</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$181</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$13,242</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">New in 2026</span>
+      <span>No prior year comparison available.</span>
+    </div>
+    <div class="fc-narrative">New flow, no direct Q1 2025 comp. $13.2K on 21K sends is modest but expected for a winback — these are lapsed customers and the bar is getting them back at all. AOV of $181 suggests the ones who do come back spend well.</div>
+  </div>
+
+  <!-- 8. Tier Earned (Toki) (NEW) -->
+  <div class="flow-card fc-new">
+    <div class="fc-label">Email Flow · Loyalty</div>
+    <div class="fc-name">Tier Earned (Toki)</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">10,536</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">864</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">256</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$179</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$45,793</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">New in 2026</span>
+      <span>No prior year comparison available.</span>
+    </div>
+    <div class="fc-narrative">Brand new following the platform migration from Yotpo. $45.8K in Q1 with strong AOV ($178) — loyalty triggers are converting. No prior comp, but this is one of the stronger new flow launches in the program.</div>
+  </div>
+
+  <!-- 9. Points Reminder (effectively NEW) -->
+  <div class="flow-card fc-new">
+    <div class="fc-label">Email Flow · Loyalty</div>
+    <div class="fc-name">Points Reminder</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">20,000</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">1,894</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">135</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$149</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$20,175</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">New in 2026</span>
+      <span>Effectively new — barely running in Q1 2025. No meaningful prior comparison.</span>
+    </div>
+    <div class="fc-narrative">Effectively new — barely running in Q1 2025. $20.2K on 20K sends is a solid baseline for a low-effort retention trigger. AOV is healthy and there's room to scale sends as the loyalty program matures.</div>
+  </div>
+
+  <!-- 10. Rewards Monthly Update (NEW) -->
+  <div class="flow-card fc-new">
+    <div class="fc-label">Email Flow · Loyalty</div>
+    <div class="fc-name">Rewards Monthly Update</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">57,913</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">1,210</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">134</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$162</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$21,727</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">New in 2026</span>
+      <span>No prior year comparison available.</span>
+    </div>
+    <div class="fc-narrative">New as a live flow — previously manual or handled outside Klaviyo. $21.7K generated with minimal engagement infrastructure in place. As the cadence matures and the list grows, this one should compound.</div>
+  </div>
+
+  <!-- 11. Price Drop -->
+  <div class="flow-card fc-up">
+    <div class="fc-label">Email Flow · Inventory</div>
+    <div class="fc-name">Price Drop</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">57,336</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">7,695</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">221</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$103</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$22,718</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta up">↑381%</span>
+      <span>Q1 2025: $4,723 · Sends 3,506 · Clicks 318 · Orders 46 · AOV $103</span>
+    </div>
+    <div class="fc-narrative">One of the biggest wins in the program. Revenue up 381% — sends jumped from 3.5K to 57K as the flow was fully activated. This was barely running in Q1 2025; now it's a real revenue channel. AOV held flat, which means the volume gains are clean.</div>
+  </div>
+
+  <!-- 12. Back In Stock -->
+  <div class="flow-card fc-up">
+    <div class="fc-label">Email Flow · Inventory</div>
+    <div class="fc-name">Back In Stock</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">6,974</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">931</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">250</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$191</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$47,651</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta up">↑152%</span>
+      <span>Q1 2025: $18,876 · Sends 2,700 · Clicks 540 · Orders 139 · AOV $136</span>
+    </div>
+    <div class="fc-narrative">Sends up 158%, revenue up 152%, AOV up 40% — every metric improved. Better inventory management, better trigger coverage, or both. This flow is punching well above its send volume relative to the rest of the program.</div>
+  </div>
+
+  <!-- 13. Birthday (Toki) (NEW) -->
+  <div class="flow-card fc-new">
+    <div class="fc-label">Email Flow · Loyalty</div>
+    <div class="fc-name">Birthday (Toki)</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">2,224</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">308</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">13</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$102</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$1,329</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">New in 2026</span>
+      <span>No prior year comparison available.</span>
+    </div>
+    <div class="fc-narrative">New with the Toki migration. Small volume, small revenue — but birthday flows are long-game plays. The $102 AOV is the floor; as the birthday segment grows year-over-year this becomes a meaningful loyalty touchpoint.</div>
+  </div>
+
+  <!-- 14. Transactional -->
+  <div class="flow-card fc-down">
+    <div class="fc-label">Email Flow · Transactional</div>
+    <div class="fc-name">Transactional</div>
+    <div class="fc-metrics">
+      <div class="fc-metric"><div class="fc-m-label">Sends</div><div class="fc-m-val">72,790</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Uniq Clicks</div><div class="fc-m-val">9,488</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Orders</div><div class="fc-m-val">491</div></div>
+      <div class="fc-metric"><div class="fc-m-label">AOV</div><div class="fc-m-val">$97</div></div>
+      <div class="fc-metric"><div class="fc-m-label">Revenue</div><div class="fc-m-val">$47,793</div></div>
+    </div>
+    <div class="fc-yoy">
+      <span class="fc-yoy-label">YoY Revenue</span>
+      <span class="delta down">↓57%</span>
+      <span>Q1 2025: $110,606 · Sends 107,373 · Clicks 14,013 · Orders 914 · AOV $121</span>
+    </div>
+    <div class="fc-narrative">The outlier. Revenue down 57%, sends down 32% — something changed with Wonderment send volume in Q1 2026. This isn't a flow performance issue, it's a trigger or configuration issue worth investigating before it compounds further.</div>
+  </div>
+
+</div>
+
+    </div>
   </div>
 </section>
 
