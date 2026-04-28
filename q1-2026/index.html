@@ -946,6 +946,195 @@
     .flow-campaign-section, .q2-priorities-section { padding-left: 16px; padding-right: 16px; }
   }
 
+  /* ─── NEW SECTION SHARED STYLES ─── */
+  .sec-header {
+    padding: 56px 48px 32px;
+  }
+  .sec-eyebrow {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .sec-title {
+    font-size: clamp(28px, 4vw, 42px); font-weight: 200; color: var(--ink);
+    letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 10px;
+  }
+  .sec-subline {
+    font-size: 14px; font-weight: 400; color: var(--ink-mute); max-width: 680px; line-height: 1.6;
+  }
+
+  /* ─── FLOW SUMMARY SECTION ─── */
+  .flow-summary-section {
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+  }
+  .flow-stat-row {
+    display: flex; gap: 16px; padding: 0 48px 32px; flex-wrap: wrap;
+  }
+  .flow-stat-box {
+    flex: 1; min-width: 220px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 24px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .fsb-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .fsb-value {
+    font-size: 26px; font-weight: 300; color: var(--ink); letter-spacing: -0.02em; line-height: 1;
+  }
+  .fsb-delta {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--sage);
+  }
+  .fsb-sub {
+    font-size: 11px; color: var(--ink-mute); font-weight: 500;
+  }
+  .flow-table-wrap {
+    padding: 0 48px 16px; overflow-x: auto;
+  }
+  .flow-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 4px; overflow: hidden;
+    font-family: 'Mulish', sans-serif;
+  }
+  .flow-table thead tr {
+    background: var(--paper);
+    border-bottom: 2px solid var(--rule);
+  }
+  .flow-table thead th {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-mute); padding: 12px 16px; text-align: left;
+    white-space: nowrap; border-bottom: 2px solid var(--rule);
+  }
+  .flow-table tbody tr:nth-child(odd) { background: var(--paper); }
+  .flow-table tbody tr:nth-child(even) { background: var(--cream); }
+  .flow-table tbody td {
+    padding: 11px 16px; color: var(--ink-mute); font-weight: 400;
+    border-bottom: 1px solid var(--rule); vertical-align: middle;
+  }
+  .flow-table tbody tr:last-child td { border-bottom: none; }
+  .flow-table .td-flow { font-weight: 600; color: var(--ink); }
+  .flow-table .td-yoy { font-weight: 700; white-space: nowrap; }
+  .flow-table .td-yoy.pos { color: var(--sage); }
+  .flow-table .td-yoy.neg { color: var(--rust); }
+  .badge-new {
+    display: inline-block; background: var(--gold); color: var(--paper);
+    font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+    padding: 2px 7px; border-radius: 3px; text-transform: uppercase;
+  }
+  .flow-table-note {
+    padding: 12px 48px 48px;
+    font-size: 12px; font-style: italic; color: var(--ink-mute);
+  }
+
+  /* ─── CAMPAIGN SUMMARY SECTION ─── */
+  .campaign-summary-section {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+  .camp-stat-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+    padding: 0 48px 32px;
+  }
+  @media (max-width: 768px) { .camp-stat-grid { grid-template-columns: 1fr; } }
+  .camp-stat-box {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 24px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .csb-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .csb-value {
+    font-size: 26px; font-weight: 300; color: var(--ink); letter-spacing: -0.02em; line-height: 1;
+  }
+  .csb-delta { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; }
+  .csb-delta.pos { color: var(--sage); }
+  .csb-delta.neg { color: var(--rust); }
+  .camp-table-wrap {
+    padding: 0 48px 0; overflow-x: auto;
+  }
+  .camp-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 4px; overflow: hidden;
+    font-family: 'Mulish', sans-serif;
+  }
+  .camp-table thead tr {
+    background: var(--paper); border-bottom: 2px solid var(--rule);
+  }
+  .camp-table thead th {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-mute); padding: 12px 16px; text-align: left; white-space: nowrap;
+    border-bottom: 2px solid var(--rule);
+  }
+  .camp-table tbody tr:nth-child(odd) { background: var(--paper); }
+  .camp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .camp-table tbody td {
+    padding: 11px 16px; color: var(--ink-mute); font-weight: 400;
+    border-bottom: 1px solid var(--rule); vertical-align: middle;
+  }
+  .camp-table tbody tr:last-child td { border-bottom: none; }
+  .camp-rank { font-weight: 700; color: var(--gold); letter-spacing: 0.08em; }
+  .camp-name { font-weight: 600; color: var(--ink); }
+  .camp-callout {
+    margin: 20px 48px 48px;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 16px 24px;
+    border-radius: 4px;
+    font-size: 13px; font-weight: 500; line-height: 1.55;
+  }
+
+  /* ─── Q2 PRIORITIES NEW SECTION ─── */
+  .q2-new-section {
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+  }
+  .q2-new-list {
+    list-style: none; max-width: 680px;
+    padding: 0 48px;
+  }
+  .q2-new-item {
+    display: flex; align-items: flex-start; gap: 20px;
+    padding: 22px 0; border-bottom: 1px solid var(--rule);
+  }
+  .q2-new-item:first-child { padding-top: 0; }
+  .q2-new-item:last-child { border-bottom: none; padding-bottom: 56px; }
+  .q2-new-num {
+    font-size: 11px; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.12em; width: 24px; flex-shrink: 0; padding-top: 2px;
+  }
+  .q2-new-text { font-size: 14px; color: var(--ink-soft); line-height: 1.55; font-weight: 400; }
+  .q2-new-text strong { font-weight: 700; color: var(--ink); }
+
+  @media (max-width: 768px) {
+    .sec-header { padding-left: 24px; padding-right: 24px; }
+    .flow-stat-row { padding-left: 24px; padding-right: 24px; }
+    .flow-table-wrap { padding-left: 24px; padding-right: 24px; }
+    .flow-table-note { padding-left: 24px; padding-right: 24px; }
+    .camp-stat-grid { padding-left: 24px; padding-right: 24px; }
+    .camp-table-wrap { padding-left: 24px; padding-right: 24px; }
+    .camp-callout { margin-left: 24px; margin-right: 24px; }
+    .q2-new-list { padding-left: 24px; padding-right: 24px; }
+  }
+  @media (max-width: 480px) {
+    .sec-header { padding-left: 16px; padding-right: 16px; }
+    .flow-stat-row { padding-left: 16px; padding-right: 16px; }
+    .flow-table-wrap { padding-left: 16px; padding-right: 16px; }
+    .flow-table-note { padding-left: 16px; padding-right: 16px; }
+    .camp-stat-grid { padding-left: 16px; padding-right: 16px; }
+    .camp-table-wrap { padding-left: 16px; padding-right: 16px; }
+    .camp-callout { margin-left: 16px; margin-right: 16px; }
+    .q2-new-list { padding-left: 16px; padding-right: 16px; }
+  }
+
   /* ─── FULL REPORT PANE ─── */
   #pane-fullreport {
     padding-top: 52px;
@@ -1210,8 +1399,128 @@
       <div class="klav-note">Klaviyo held 55% of Shopify revenue. The decline mirrors overall demand contraction, not email program failure. Flows are performing. Campaigns are volume-sensitive.</div>
     </div>
 
-    <!-- Section 5: Top Flows + Campaigns side-by-side -->
-    <div class="flow-campaign-section">
+    <!-- Section 2: Flow Summary -->
+    <div style="padding:64px 48px;background:var(--paper);border-bottom:1px solid var(--rule)">
+      <div style="max-width:1200px;margin:0 auto">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">§ 02 · Flow Performance</div>
+        <h2 style="font-family:'Mulish',sans-serif;font-weight:200;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;line-height:1.1">Flows held the line.</h2>
+        <p style="font-size:16px;color:var(--ink-mute);margin-bottom:40px;max-width:60ch">$816K (+0.8% YoY) against a business down 25% in orders. SMS broke out. Email held volume.</p>
+
+        <!-- Stat boxes -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;max-width:600px">
+          <div style="background:var(--cream);border:1px solid var(--rule);padding:24px 28px">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px">Total Flow Revenue</div>
+            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:32px;letter-spacing:-0.02em;color:var(--ink)">$816K</div>
+            <div style="font-size:12px;font-weight:600;color:var(--sage);margin-top:4px">↑ 0.8% YoY</div>
+          </div>
+          <div style="background:var(--cream);border:1px solid var(--rule);padding:24px 28px">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px">SMS Flow Revenue</div>
+            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:32px;letter-spacing:-0.02em;color:var(--ink)">$373K</div>
+            <div style="font-size:12px;font-weight:600;color:var(--sage);margin-top:4px">↑ 73.5% YoY · 46% of flows</div>
+          </div>
+        </div>
+
+        <!-- Flow YoY Table -->
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-family:'Mulish',sans-serif;font-size:13px">
+            <thead>
+              <tr style="border-bottom:2px solid var(--rule)">
+                <th style="text-align:left;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">Flow</th>
+                <th style="text-align:left;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">Channel</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">2026 Revenue</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">Sends</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">AOV</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">YoY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Welcome Series — SMS</td><td style="padding:11px 14px;color:var(--ink-mute)">SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$156,195</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">19,279</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$150</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--rust)">−3.9%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Welcome Series — Email</td><td style="padding:11px 14px;color:var(--ink-mute)">Email</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$103,618</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">49,302</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$153</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--rust)">−14.2%</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Added to Cart</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$112,310</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">37,727</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$185</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--rust)">−25.5%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Abandoned Checkout</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$98,945</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">15,404</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$168</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+14.8%</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Back In Stock</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$47,651</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">6,974</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$191</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+152.4%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Transactional</td><td style="padding:11px 14px;color:var(--ink-mute)">Email</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$47,793</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">72,790</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$97</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--rust)">−56.8%</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Tier Earned (Toki)</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$45,793</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">10,536</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$179</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+49.4%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Browse Abandonment</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$38,733</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">80,735</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$143</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+177.9%</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Post-Purchase</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$38,697</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">70,221</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$133</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+24.4%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Price Drop</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$22,718</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">57,336</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$103</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+381.0%</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Rewards Monthly Update</td><td style="padding:11px 14px;color:var(--ink-mute)">Email</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$21,727</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">57,913</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$162</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--rust)">−28.1%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Points Reminder</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$20,175</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">20,000</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$149</td><td style="padding:11px 14px;text-align:right"><span style="background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.1em;padding:3px 8px;border-radius:2px">NEW</span></td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Liverpool Bucks</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$18,867</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">13,607</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$135</td><td style="padding:11px 14px;text-align:right"><span style="background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.1em;padding:3px 8px;border-radius:2px">NEW</span></td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Win-back</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$16,235</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">29,659</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$176</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+2.7%</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Review Request</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$11,478</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">26,047</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$132</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+144.4%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Abandoned Site — Concierge</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$8,456</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">24,990</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$146</td><td style="padding:11px 14px;text-align:right"><span style="background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.1em;padding:3px 8px;border-radius:2px">NEW</span></td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">SMS Post Purchase</td><td style="padding:11px 14px;color:var(--ink-mute)">SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$2,941</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">7,873</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$128</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--sage)">+49.4%</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-weight:500;color:var(--ink)">Birthday (Toki)</td><td style="padding:11px 14px;color:var(--ink-mute)">Email + SMS</td><td style="padding:11px 14px;text-align:right;font-family:'Mulish',sans-serif;font-weight:600">$1,329</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">2,224</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$102</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--rust)">−25.7%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:12px;color:var(--ink-mute);font-style:italic;margin-top:16px">Full flow card breakdown with sends, clicks, and conversion detail available in the Full Report tab.</p>
+      </div>
+    </div>
+
+    <!-- Section 3: Campaign Summary -->
+    <div style="padding:64px 48px;background:var(--cream);border-bottom:1px solid var(--rule)">
+      <div style="max-width:1200px;margin:0 auto">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">§ 03 · Campaign Performance</div>
+        <h2 style="font-family:'Mulish',sans-serif;font-weight:200;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;line-height:1.1">More reach, tighter conversion.</h2>
+        <p style="font-size:16px;color:var(--ink-mute);margin-bottom:40px;max-width:64ch">Recipients up 45.9% — but demand contraction compressed campaign economics. Reminder cadence is the Q2 fix.</p>
+
+        <!-- 4 stat boxes -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px">
+          <div style="background:var(--paper);border:1px solid var(--rule);padding:22px 24px">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px">Campaign Revenue</div>
+            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;letter-spacing:-0.02em;color:var(--ink)">$522K</div>
+            <div style="font-size:12px;font-weight:600;color:var(--rust);margin-top:4px">↓ 23.6% YoY</div>
+          </div>
+          <div style="background:var(--paper);border:1px solid var(--rule);padding:22px 24px">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px">Total Recipients</div>
+            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;letter-spacing:-0.02em;color:var(--ink)">14.7M</div>
+            <div style="font-size:12px;font-weight:600;color:var(--sage);margin-top:4px">↑ 45.9% YoY</div>
+          </div>
+          <div style="background:var(--paper);border:1px solid var(--rule);padding:22px 24px">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px">Campaign AOV</div>
+            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;letter-spacing:-0.02em;color:var(--ink)">$169</div>
+            <div style="font-size:12px;font-weight:600;color:var(--sage);margin-top:4px">↑ 7.9% YoY</div>
+          </div>
+          <div style="background:var(--paper);border:1px solid var(--rule);padding:22px 24px">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px">Rev / Recipient</div>
+            <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:28px;letter-spacing:-0.02em;color:var(--ink)">$0.035</div>
+            <div style="font-size:12px;font-weight:600;color:var(--rust);margin-top:4px">↓ 45.8% YoY</div>
+          </div>
+        </div>
+
+        <!-- Top 5 campaigns table -->
+        <div style="overflow-x:auto;margin-bottom:24px">
+          <table style="width:100%;border-collapse:collapse;font-family:'Mulish',sans-serif;font-size:13px">
+            <thead>
+              <tr style="border-bottom:2px solid var(--rule)">
+                <th style="text-align:left;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute);width:36px">#</th>
+                <th style="text-align:left;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">Campaign</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">Recipients</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">Revenue</th>
+                <th style="text-align:right;padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute)">RPR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-family:'Mulish',sans-serif;font-weight:700;font-size:11px;color:var(--gold);letter-spacing:0.1em">01</td><td style="padding:11px 14px;font-weight:500;color:var(--ink)">1/01 · Last Chance</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">156K</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--ink)">$15,900</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$0.102</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-family:'Mulish',sans-serif;font-weight:700;font-size:11px;color:var(--gold);letter-spacing:0.1em">02</td><td style="padding:11px 14px;font-weight:500;color:var(--ink)">3/06 · Flash Sale Begins</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">296K</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--ink)">$15,700</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$0.053</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-family:'Mulish',sans-serif;font-weight:700;font-size:11px;color:var(--gold);letter-spacing:0.1em">03</td><td style="padding:11px 14px;font-weight:500;color:var(--ink)">1/29 · End of Season Launch</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">198K</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--ink)">$12,300</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$0.062</td></tr>
+              <tr style="background:var(--cream)"><td style="padding:11px 14px;font-family:'Mulish',sans-serif;font-weight:700;font-size:11px;color:var(--gold);letter-spacing:0.1em">04</td><td style="padding:11px 14px;font-weight:500;color:var(--ink)">1/04 · Wrap Up Last Chance</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">251K</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--ink)">$11,500</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$0.046</td></tr>
+              <tr style="background:var(--paper)"><td style="padding:11px 14px;font-family:'Mulish',sans-serif;font-weight:700;font-size:11px;color:var(--gold);letter-spacing:0.1em">05</td><td style="padding:11px 14px;font-weight:500;color:var(--ink)">1/02 · Back by Popular Demand</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">159K</td><td style="padding:11px 14px;text-align:right;font-weight:600;color:var(--ink)">$10,800</td><td style="padding:11px 14px;text-align:right;color:var(--ink-mute)">$0.068</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Callout strip -->
+        <div style="background:var(--ink);color:var(--cream);padding:18px 24px;font-size:13px;line-height:1.55">
+          Top campaign in 2025 generated $29.4K. Top campaign in 2026: $15.9K. Rebuilding the multi-touch reminder cadence is Q2 Priority #2.
+        </div>
+      </div>
+    </div>
+
+    <!-- OLD SECTIONS PLACEHOLDER —  Q2 Priorities below -->
+    <div class="flow-campaign-section" style="display:none">
       <div class="section-eyebrow">Channel Performance</div>
       <div class="fc-grid">
 
@@ -1345,7 +1654,9 @@
 
     <!-- Section 6: Q2 Priorities -->
     <div class="q2-priorities-section">
-      <div class="section-eyebrow">Q2 Priorities</div>
+      <div class="section-eyebrow" style="color:var(--gold);margin-bottom:16px">§ 04 · Q2 Roadmap</div>
+      <h2 style="font-family:'Mulish',sans-serif;font-weight:200;font-size:clamp(32px,4vw,52px);letter-spacing:-0.02em;color:var(--ink);margin-bottom:12px;line-height:1.1">Q2 is already loaded.</h2>
+      <p style="font-size:16px;color:var(--ink-mute);margin-bottom:40px;max-width:60ch">10 flows in motion. Four priorities that move the number.</p>
       <ol class="q2-list">
         <li class="q2-item">
           <span class="q2-num">01</span>
