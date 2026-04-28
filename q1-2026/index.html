@@ -934,10 +934,7 @@ document.addEventListener('keydown',function(e){
           <div style="font-family:'Mulish',sans-serif;font-weight:300;font-size:52px;letter-spacing:-0.02em;margin-top:8px;line-height:1">$816<span style="font-size:32px">K</span></div>
           <div class="delta up" style="font-size:13px;margin-top:6px">↗ +0.8% YoY · flat against a softer business</div>
         </div>
-        <div class="chart-frame" style="padding:28px">
-          <div class="label">Email vs SMS · Conversion Value Growth</div>
-          <div class="chart-box" style="height:180px;margin-top:12px"><canvas id="flowSplit"></canvas></div>
-        </div>
+
       </div>
     </div>
 
@@ -2063,39 +2060,7 @@ new Chart(document.getElementById('channelDonut'), {
   }]
 });
 
-// ---------- Flow split: email vs sms conversion value YoY change ----------
-new Chart(document.getElementById('flowSplit'), {
-  type: 'bar',
-  data: {
-    labels: ['Email', 'SMS'],
-    datasets: [{
-      label: 'Conversion Value YoY %',
-      data: [-25.4, 73.5],
-      backgroundColor: (ctx) => ctx.parsed.y < 0 ? RUST : SAGE,
-      borderRadius: 2,
-      barPercentage: 0.45
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    indexAxis: 'y',
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        backgroundColor: '#14120F',
-        callbacks: { label: (c) => ` ${c.parsed.x > 0 ? '+' : ''}${c.parsed.x}% YoY` }
-      }
-    },
-    scales: {
-      x: {
-        grid: { color: '#E5DDCC', drawBorder: false },
-        ticks: { callback: (v) => (v > 0 ? '+' : '') + v + '%', padding: 6 }
-      },
-      y: { grid: { display: false }, ticks: { font: { size: 12, weight: '500' }, padding: 6 } }
-    }
-  }
-});
+
 
 // (Top 5 chart removed per feedback)
 
