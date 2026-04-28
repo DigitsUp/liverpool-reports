@@ -51,21 +51,49 @@
     position: fixed;
     inset: 0;
     z-index: 999;
-    background: rgba(20, 18, 15, 0.96);
+    background: #14120F;
+    background-image: url('./hero-brand.jpg');
+    background-size: cover;
+    background-position: center top;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 28px;
   }
+  #gate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 12, 10, 0.82);
+  }
+  #gate > * { position: relative; z-index: 2; }
 
   .gate-brand {
     font-family: 'Mulish', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.28em;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.38em;
     text-transform: uppercase;
-    color: rgba(243, 238, 229, 0.45);
+    color: var(--gold);
+  }
+  .gate-title {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 200;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    text-align: center;
+    line-height: 1.1;
+  }
+  .gate-title em { font-style: italic; font-weight: 300; color: var(--gold); }
+  .gate-sub {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(243,238,229,0.4);
+    text-align: center;
   }
 
   .gate-form {
@@ -986,6 +1014,8 @@
 <!-- GATE -->
 <div id="gate">
   <div class="gate-brand">Liverpool Los Angeles</div>
+  <div class="gate-title">Q1 <em>2026</em><br>Performance Review</div>
+  <div class="gate-sub">Prepared by DigitsUp · Confidential</div>
   <div class="gate-form">
     <label for="gate-input">Access Code</label>
     <input type="password" id="gate-input" placeholder="········" autocomplete="off" spellcheck="false">

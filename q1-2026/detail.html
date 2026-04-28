@@ -499,14 +499,25 @@
 </head>
 <body>
 <script>
-if (new URLSearchParams(window.location.search).get('unlocked') === '1') {
-  document.addEventListener('DOMContentLoaded', function() {
-    var gate = document.getElementById('gate');
-    if (gate) gate.style.display = 'none';
-    var main = document.getElementById('main-content');
-    if (main) { main.style.display = 'block'; main.classList.add('visible'); }
-  });
-}
+// Auto-unlock when loaded as iframe or with ?unlocked=1 param
+(function() {
+  var shouldUnlock = window.self !== window.top || 
+                     new URLSearchParams(window.location.search).get('unlocked') === '1';
+  if (shouldUnlock) {
+    // Run immediately if DOM ready, otherwise wait
+    function doUnlock() {
+      var gate = document.getElementById('gate');
+      if (gate) gate.style.display = 'none';
+      var main = document.getElementById('main-content');
+      if (main) { main.style.display = 'block'; main.classList.add('visible'); }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', doUnlock);
+    } else {
+      doUnlock();
+    }
+  }
+})();
 </script>
 <div class="wrap">
 
