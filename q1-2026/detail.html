@@ -499,17 +499,22 @@
 </head>
 <body>
 <script>
-// Auto-unlock when loaded as iframe or with ?unlocked=1 param
+// Auto-unlock when loaded inside iframe
 (function() {
-  var shouldUnlock = window.self !== window.top || 
-                     new URLSearchParams(window.location.search).get('unlocked') === '1';
-  if (shouldUnlock) {
-    // Run immediately if DOM ready, otherwise wait
+  var inIframe = window.self !== window.top;
+  var hasParam = new URLSearchParams(window.location.search).get('unlocked') === '1';
+  if (inIframe || hasParam) {
     function doUnlock() {
-      var gate = document.getElementById('gate');
-      if (gate) gate.style.display = 'none';
-      var main = document.getElementById('main-content');
-      if (main) { main.style.display = 'block'; main.classList.add('visible'); }
+      // Try both possible overlay IDs
+      ['pw-overlay','gate','main-gate'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.style.display = 'none'; el.classList.add('hidden'); }
+      });
+      // Show main content if gated
+      ['main-content','report-content','wrap'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.style.display = 'block'; el.classList.add('visible'); }
+      });
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', doUnlock);
